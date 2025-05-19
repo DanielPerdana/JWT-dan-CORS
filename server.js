@@ -8,13 +8,7 @@ const postRoutes = require('./controllers/postController');
 const requireAuth = require('./middlewares/requireAuth');
 
 const app = express();
-app.use(cors({
-  origin: [
-    'http://127.0.0.1:5500/', // ganti dengan domain frontend kamu
-    'http://127.0.0.1:5500/'   // untuk development lokal
-  ],
-  credentials: true
-}));
+app.use (cors());
 app.use(express.json());
 
 // Connect MongoDB
