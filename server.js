@@ -8,10 +8,7 @@ const postRoutes = require('./controllers/postController');
 const requireAuth = require('./middlewares/requireAuth');
 
 const app = express();
-app.use(cors({
-  origin: ['https://fe-jwt-dan-cors.vercel.app'],
-  credentials: true
-}));
+app.use(cors());
 app.use(express.json());
 
 // Connect MongoDB
